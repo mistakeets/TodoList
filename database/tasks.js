@@ -1,3 +1,5 @@
+const {allTasks, createTask, updateName, deleteTask} = require( './queries.js' )
+
 const Tasks = {
   getAll: () => {
     return db.any( allTasks )
@@ -13,4 +15,4 @@ const Tasks = {
   }
 }
 
-modules.exports = Tasks
+module.exports = Tasks
