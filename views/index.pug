@@ -1,9 +1,13 @@
 extends layout
 
 block content
-  h1 Do It Now
+  h1 Do It NOW!
 
 
   form(action='/createTask', method='POST')
     input(name='task', type='text' placeholder='Enter Task Name')
     button(type="submit") Submit
+
+  ul
+    each task in Tasks
+      li= task.name

@@ -5,8 +5,14 @@ const Queries = require( '../database/queries.js' )
 const pgPromise = require('pg-promise')
 
 // /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', function( req, res ) {
+  Tasks.getAll().then(Tasks => {
+    res.render('index', {
+      Title: 'To Do List',
+      Tasks: Tasks
+    }).catch(error => next(error))
+  })
+  //res.render('index', { title: 'Do it NOW!' });
 });
 
 
@@ -17,7 +23,7 @@ router.post('/createTask', (req,res)=> {
   });
 });
 
-// //GET ALL
+//GET ALL
 // router.get('/', (req,res)=> {
 //   Tasks.getAll(req.body.task).then( () => response.render('index', {task:allTasks}))
 // });
