@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Do It Now
+
+
+  form(action='/createTask', method='POST')
+    input(name='task', type='text' placeholder='Enter Task Name')
+    button(type="submit") Submit
