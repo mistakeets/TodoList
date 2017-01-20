@@ -6,17 +6,10 @@ const pgp = pgPromise()
 const db = pgp({database: 'doitnow'})
 
 const tasks = {
-  getAll: () => {
-    return db.any( queries.allTasks )    
-  },
-  create: ( name ) => {
-    return db.oneOrNone ( queries.createTask, [name] )
-  },
-  update: ( id, name ) => {
-    return db.one ( queries.updateName [id, name] )
-  },
+  getAll: () => db.any( queries.allTasks ),
+  create: ( name ) =>  db.oneOrNone ( queries.createTask, [name] ),
+  update: ( id, name ) =>  db.one ( queries.updateName [id, name] ),
   deleteTask: ( id ) => db.none ( queries.deleteTask, [id] )
-  
 }
 
 module.exports = tasks;

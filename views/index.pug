@@ -12,4 +12,4 @@ block content
     each task in tasks
       li= task.name
         form(action='/deleteTask/' + task.id method='POST')
-          button(type="delete") delete
+          button(type="submit") delete

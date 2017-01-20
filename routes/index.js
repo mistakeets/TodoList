@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const tasks = require('../database/tasks.js')
-const queries = require( '../database/queries.js' )
+const queries = require('../database/queries.js')
 const pgPromise = require('pg-promise')
 
 //GET ALL
@@ -25,7 +25,6 @@ router.post('/createTask', ( req, res )=> {
 
 //DELETE A TASK
 router.post('/deleteTask/:id', ( req, res )=> {
-  console.log("req.body", req.params.id)
   tasks.deleteTask( req.params.id ).then( () => {
     res.redirect('/')
   })
