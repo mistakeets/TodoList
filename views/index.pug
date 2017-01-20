@@ -6,8 +6,10 @@ block content
 
   form(action='/createTask', method='POST')
     input(name='task', type='text' placeholder='Enter Task Name')
-    button(type="submit") Submit
+    button(type="submit") submit
 
   ul
-    each task in Tasks
+    each task in tasks
       li= task.name
+        form(action='/deleteTask/' + task.id method='POST')
+          button(type="delete") delete
