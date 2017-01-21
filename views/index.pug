@@ -10,6 +10,12 @@ block content
 
   ul
     each task in tasks
-      li= task.name
-        form(action='/deleteTask/' + task.id method='POST')
+      form(action='/updateTask/' + task.id, method='post')
+        li
+          input(name='name', placeholder= task.name)
+
+
+
+      form(action='/deleteTask/' + task.id, method='POST')
+        li
           button(type="submit") delete

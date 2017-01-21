@@ -8,7 +8,7 @@ const db = pgp({database: 'doitnow'})
 const tasks = {
   getAll: () => db.any( queries.allTasks ),
   create: ( name ) =>  db.oneOrNone ( queries.createTask, [name] ),
-  update: ( id, name ) =>  db.one ( queries.updateName [id, name] ),
+  update: ( id, name ) =>  db.one ( queries.updateName, [id, name] ),
   deleteTask: ( id ) => db.none ( queries.deleteTask, [id] )
 }
 
