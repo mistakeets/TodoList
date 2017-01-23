@@ -10,7 +10,7 @@ router.get('/', function( req, res ) {
     res.render('index', {
       title: 'To Do List',
       tasks: tasks
-    })   
+    })
   })
   .catch(error => res.json(error))
 })
@@ -29,6 +29,24 @@ router.post('/deleteTask/:id', ( req, res )=> {
     res.redirect('/')
   })
   .catch(error => res.json(error))
+})
+
+
+//UPDATE TASK name
+router.get('/updateTask/:id', ( req,res )=> {
+const { id } = req.params
+
+Promise.all('SELECT * from todos WHERE id=$1').then(data=> {
+  res.redirect('/')
+})
+
+})
+router.post('/updateTask/:id', ( req, res )=> {
+  console.log('BODY', req.body)
+  tasks.update(req.body.name, req.params.id ).then( () => {
+    res.redirect('/')
+  })
+    .catch(error => res.json(error))
 })
 
 module.exports = router;
