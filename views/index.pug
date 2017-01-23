@@ -4,18 +4,17 @@ block content
   h1 Do It NOW!
 
 
-  form(action='/createTask', method='POST')
-    input(name='task', type='text' placeholder='Enter Task Name')
-    button(type="submit") submit
 
-  ul
-    each task in tasks
-      form(action='/updateTask/' + task.id, method='post')
-        li
-          input(name='name', placeholder= task.name)
+    form.newTodo(action='/createTask', method='POST')
+      input(name='task', type='text' placeholder='Enter Task Name')
+      button(type="submit") submit
 
+    ul
+      each task in tasks
+        form(action='/updateTask/' + task.id, method='post')
+          li
+            input(name='name', value= task.name)
 
-
-      form(action='/deleteTask/' + task.id, method='POST')
-        li
-          button(type="submit") delete
+        form(action='/deleteTask/' + task.id, method='POST')
+          li
+            button(type="submit") X
