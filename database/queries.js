@@ -1,5 +1,5 @@
 const queries = {
-  allTasks: 'SELECT * from todos',
+  allTasks: 'SELECT * from todos ORDER by id',
 
   createTask: 'INSERT INTO todos (name) VALUES ($1) RETURNING id',
 
