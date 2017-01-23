@@ -18,21 +18,21 @@ Goals
 ## User Stories:
 
 The App: As a user...
-- [ ] I can create to do list items.
-- [ ] I can delete unwanted to do list items.
-- [ ] I can edit the text on existing to do's.
+- [X] I can create to do list items.
+- [X] I can delete unwanted to do list items.
+- [X] I can edit the text on existing to do's.
 
 #### Deep Dive
-- [ ] Develop a solid understanding of creating the back end using node.
-- [ ] Understand PG-Promise (https://github.com/vitaly-t/pg-promise#documentation)
-- [ ] Understand and utilize principles of Restful API / routing (http://restfulrouting.com)
-- [ ] Understand and utilize Express (https://scotch.io/tutorials/keeping-api-routing-clean-using-express-routers)
+- [X] Develop a solid understanding of creating the back end using node.
+- [X] Understand PG-Promise (https://github.com/vitaly-t/pg-promise#documentation)
+- [X] Understand and utilize principles of Restful API / routing (http://restfulrouting.com)
+- [X] Understand and utilize Express (https://scotch.io/tutorials/keeping-api-routing-clean-using-express-routers)
 
 #### Additional Specs:
-- [ ] Create a database of to do list items.
-- [ ] JS Lint finds no mistakes
-- [ ] Follow good Git team behaviors (do all your work on branches & submit pull requests for review before merging to master)
-- [ ] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
+- [X] Create a database of to do list items.
+- [X] JS Lint finds no mistakes
+- [X] Follow good Git team behaviors (do all your work on branches & submit pull requests for review before merging to master)
+- [X] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
 
 #### Stretch Goals/Nice to Have's:
 - [ ] I can create mulitple lists of to do's.
